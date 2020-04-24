@@ -1,0 +1,27 @@
+.article {
+    background-color: #eee;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    height: 40vh;
+    margin-bottom: 2vh;
+    .titre {
+        font-size: 3em;
+        line-height: 1.15;
+    }
+    .titre2 {
+        font-size: 2em;
+        line-height: 1.15;
+    }
+    .contenu2 {
+        margin-top: 40px;
+    }
+    .contenu {
+        margin-top: 20px;
+    }
+
+    &.une {
+        height: 82vh;
+    }
+}

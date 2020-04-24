@@ -1,0 +1,32 @@
+.image-arriere {
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+}
+
+.filtre {
+    height: 60vh; 
+    margin-top: -60vh;
+    background: rgba(darkred, 0.8);
+}
+
+.blog {
+    padding-top: 60vh;
+    padding-left: 12vmin;
+    padding-right: 12vmin;
+    transform: translateY(-50%);
+
+    .titre {
+        font-size: 4.0em;
+        width: 65%;
+        line-height: 1.15;
+    }
+}
+
+.article--contenu {
+    font-size: 1.4em;
+    padding: 5vmin;
+    padding-left: 12vmin;
+    padding-right: 12vmin;
+    width: 90%;
+}

@@ -1,0 +1,25 @@
+$bgred: #CE352C;
+
+.image-arriere {
+    height: 50vh;
+    background-image: url('../../../../assets/img/tombouctou.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.news {
+    background-color: rgba($bgred, 0.95);
+    margin-top: -50vh;
+    height: 50vh;
+}
+
+.titre {
+    font-size: 4em;
+}
+
+.contenu {
+    padding-left: 20vw;
+    padding-right: 20vw;
+    div {
+        margin-bottom: 10px;
+    }
+}

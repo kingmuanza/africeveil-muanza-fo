@@ -1,0 +1,24 @@
+<div class="image-arriere">
+
+</div>
+<div class="news">
+    <div class="page">
+
+        <div class="nyanga titre fg-white text-center">
+            Inscrivez vous à notre newsletter
+        </div>
+        <div class="contenu">
+            <form [formGroup]="newsLetterForm" (ngSubmit)="onNewsLetterFormSubmit()">
+                <div class="">
+                    <input formControlName="email" style="text-align: center;" type="email" data-role="input">
+                </div>
+                <div class="">
+                    <button [disabled]="newsLetterForm.invalid" class="button" style="width: 100%;">
+                        S'inscrire
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

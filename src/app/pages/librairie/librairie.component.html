@@ -1,0 +1,69 @@
+<div class="page" style="min-height: 100vh; padding-bottom: 40vh;">
+    <div class="row">
+        <div class="cell-lg-3">
+            <div class="rechercher">
+                <div class="libelle nyanga">
+                    Rechercher
+                </div>
+                <div style="margin-top: -10px;">
+                    <input [(ngModel)]="recherche" (ngModelChange)="rechercher($event)" type="text" data-role="materialinput"
+                    placeholder="">
+                </div>
+                <div class="libelle nyanga">
+                    Filtrer par
+                </div>
+                <div>
+                    <b style="text-transform: uppercase;">
+                        Catégories
+                    </b>
+                </div>
+                <ul style="margin-top: 0px; padding-left: 0; margin-left: 0;">
+                    <li class="categorie">
+                        Les meilleures ventes
+                    </li>
+                    <li class="categorie">
+                        Nos livres du mois
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="cell-lg-9">
+
+            <div class="titre nyanga">
+                Librairie
+            </div>
+            <div class="contenu">
+                <div class="row">
+                    <ng-container *ngFor="let livre of livresResultat">
+                        <div class="cell-lg-3">
+                            <div [ngStyle]="{'background-image': 'url('+ livre.couverture +')'}" class="livre">
+                                
+                            </div>
+                        </div>
+                        <div class="cell-lg-3">
+                            <div class="informations">
+                                <div class="titre-livre nyanga">
+                                    {{livre.titre}}
+
+                                </div>
+                                <div class="description-livre text-leader2">
+                                    {{livre.auteur}}
+                                </div>
+                                <div class="prix-livre nyanga">
+                                    {{livre.prix}} XAF
+                                </div>
+                                <div class="acheter">
+                                    <button (click)="commander(livre)" class="button danger alert nyanga large">
+                                        Commander
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

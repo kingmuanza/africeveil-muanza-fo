@@ -1,0 +1,53 @@
+.contenu {
+    margin-top: 1vh;
+}
+
+.rechercher {
+    margin-top: 10vh;
+    padding-right: 5vw;
+    .libelle {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+}
+
+.categorie {
+    color: #777;
+}
+.titre {
+    margin-top: 5vh;
+    font-size: 4.0em;
+}
+
+.livre {
+    height: 70vh;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+
+    &:hover {
+        border: 1px solid darkred;
+    }
+
+}
+
+.informations {
+    padding-left: 10px;
+    padding-right: 20px;
+    .titre-livre {
+        font-size: 2.0em;
+        margin: 0;
+        padding: 0;
+        line-height: 0.95;
+    }
+    .prix-livre {
+        font-size: 2.0em;
+        margin-top: 3vmin;
+    }
+    .description-livre {
+        margin-top: 10px;
+    }
+    .acheter {
+    }
+}

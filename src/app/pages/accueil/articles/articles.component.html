@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="row">
+        <div class="cell-lg-6">
+            <div class="article une">
+                <div class="titre nyanga">
+                    {{articles[0].titre}}
+                </div>
+                <div class="contenu2 nyanga" style="font-size: 1.2em;">
+                    {{articles[0].introduction}}
+                    <button (click)="lireArticle('1')" class="button link fg-red">
+                        Lire plus
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cell-lg-6">
+            <div class="article">
+                <div class="titre2 nyanga">
+                    {{articles[1].titre}}
+                </div>
+                <div class="contenu nyanga" style="font-size: 1.2em;">
+                    {{articles[1].introduction}}
+                    <button (click)="lireArticle('2')" class="button link fg-red">
+                        Lire plus
+                    </button>
+                </div>
+            </div>
+            <div class="article">
+                <div class="titre2 nyanga">
+                    {{articles[2].titre}}
+                </div>
+                <div class="contenu nyanga" style="font-size: 1.2em;">
+                    {{articles[2].introduction}}
+                    <button (click)="lireArticle('3')" class="button link fg-red">
+                        Lire plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

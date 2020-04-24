@@ -1,0 +1,75 @@
+.slide {
+    .contenu {
+        background-image: url('../../../../assets/img/background.jpeg');
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+        background-attachment: fixed;
+    }
+    .filtre {
+        height: 100vh;
+        margin-top: -100vh;
+        background-color: rgba(#000, 0.6);
+        background: linear-gradient(to right, rgba(#000, 1), rgba(#000, 0.7));
+
+        .titre {
+            font-size: 12.0em;
+            @media screen and (min-width: 599px) and (max-width: 1000px) {
+              font-size: 3.0em;
+            }
+            @media screen and (min-width: 1000px) and (max-width: 1200px) {
+              font-size: 4.0em;
+            }
+            @media screen and (max-width: 599px) {
+              font-size: 1.0em;
+            }
+            padding-top: 25vh;
+            padding-left: 10vw;
+            padding-right: 30vw;
+            line-height: 0.9;
+        }
+
+        .nouveaute {
+          
+          padding-top: 25vh;
+          padding-left: 10vw;
+          padding-right: 30vw;
+          
+          div {
+            font-size: 4.0em;
+            line-height: 1.15;
+          }
+
+          p {
+            font-size: 1.2em;
+          }
+
+          .muanza-info {
+            background-color: darkred;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 20px;
+          }
+
+        }
+    }
+}
+
+
+.inscription {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  cursor: pointer;
+  .texte {
+      float: right;
+      display: inline-block;
+      padding-top: 3vmin;
+      padding-bottom: 3vmin;
+      padding-right: 2vmax;
+      padding-left: 2vmax;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed';
+  }
+  margin-bottom: 10vh;
+}

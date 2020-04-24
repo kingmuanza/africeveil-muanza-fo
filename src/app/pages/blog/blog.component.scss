@@ -1,0 +1,23 @@
+.image-arriere {
+    background-image: url('../../../assets/img/tombouctou.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.filtre {
+    height: 50vh; 
+    margin-top: -50vh;
+    background: rgba(darkred, 0.8);
+}
+
+.blog {
+    text-align: center;
+    padding-top: 50vh;
+    padding-left: 10vmin;
+    padding-right: 10vmin;
+    transform: translateY(-50%);
+
+    .titre {
+        font-size: 5.0em;
+    }
+}

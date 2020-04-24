@@ -1,0 +1,29 @@
+<header *ngIf="position === 0" class="app-bar bg-transparent fg-white" data-role="appbar" data-expand-point="md">
+    <a style="margin-right: 40px;" class="d-block brand fg-white no-hover">
+        <span class="muanza-logo border-radius p-2">
+            AFRIC'EVEIL
+        </span>
+    </a>
+    <ul class="app-bar-menu ml-auto">
+        <li><a routerLink="accueil" routerLinkActive="active">{{ langue === 'EN' ? '': 'Accueil'}}</a></li>
+        <li><a routerLink="librairie" routerLinkActive="active">{{ langue === 'EN' ? 'News': 'Librairie'}}</a></li>
+        <li><a routerLink="blog" routerLinkActive="active">{{ langue === 'EN' ? '': 'Blog'}}</a></li>
+        <li><a routerLink="apropos" routerLinkActive="active">{{ langue === 'EN' ? '': 'A Propos'}}</a></li>
+        <li><a routerLink="contacts" routerLinkActive="active">{{ langue === 'EN' ? '': 'Contacts'}}</a></li>
+    </ul>
+</header>
+
+<header *ngIf="position > 0" class="app-bar bg-white fg-dark shadow-1" data-role="appbar" data-expand-point="md">
+    <a style="margin-right: 40px;" class="d-block brand fg-dark no-hover">
+        <span class="muanza-logo border-radius p-2">
+            AFRIC'EVEIL
+        </span>
+    </a>
+    <ul class="app-bar-menu ml-auto">
+        <li><a routerLink="accueil" routerLinkActive="active">{{ langue === 'EN' ? '': 'Accueil'}}</a></li>
+        <li><a routerLink="librairie" routerLinkActive="active">{{ langue === 'EN' ? 'News': 'Librairie'}}</a></li>
+        <li><a routerLink="blog" routerLinkActive="active">{{ langue === 'EN' ? '': 'Blog'}}</a></li>
+        <li><a routerLink="apropos" routerLinkActive="active">{{ langue === 'EN' ? '': 'A Propos'}}</a></li>
+        <li><a routerLink="contacts" routerLinkActive="active">{{ langue === 'EN' ? '': 'Contacts'}}</a></li>
+    </ul>
+</header>

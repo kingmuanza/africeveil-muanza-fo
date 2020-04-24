@@ -1,0 +1,183 @@
+<m4-dialog #dialog class="w-50" [overlay]="true">
+    <div dialog-title>
+        {{livre.titre}}
+    </div>
+    <div dialog-content>
+        <form [formGroup]="commandeForm" (ngSubmit)="onCommandeFormSubmit()">
+            <div class="commentaire nyanga">
+                Détails de la commande
+            </div>
+            <div class="row">
+                <div class="cell-lg-6">
+                    <input formControlName="quantite" type="number" data-role="input" data-prepend="Quantité">
+                </div>
+                <div class="cell-lg-6">
+                    <div class="prix">
+                        Prix Total : 0 XAF
+                    </div>
+                </div>
+            </div>
+
+            <div class="commentaire nyanga" style="margin-top: 10px;;">
+                Informations personnelles
+            </div>
+            <div class="row">
+                <div class="cell-lg-6">
+                    <input formControlName="nom" data-role="input" data-prepend="Nom">
+                </div>
+                <div class="cell-lg-6">
+                    <input formControlName="prenom" data-role="input" data-prepend="Prénom">
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell-lg-6">
+                    <input formControlName="email" data-role="input" data-prepend="Email">
+                </div>
+                <div class="cell-lg-6">
+                    <input formControlName="tel" data-role="input" data-prepend="Téléphone">
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="button alert large nyanga" type="submit" [disabled]="commandeForm.invalid">
+                    Commander
+                </button>
+            </div>
+        </form>
+
+    </div>
+</m4-dialog>
+<div style="min-height: 100vh;">
+    <div *ngIf="livre" class="row">
+        <div class="cell-lg-4">
+            <div [ngStyle]="{'background-image': 'url('+ livre.couverture +')'}" class="couverture">
+
+            </div>
+
+        </div>
+        <div class="cell-lg-8">
+            <div class="page">
+                <div class="informations">
+                    <h1 class="nyanga" style="margin-top: 7vh;">
+                        {{livre.titre}}
+                    </h1>
+
+                    <div class="description-livre text-leader2">
+                        {{livre.auteur}}
+                    </div>
+                    <div class="prix-livre nyanga">
+
+                    </div>
+                    <div class="nyanga" style="font-size: 1.1em;">
+                        <p *ngIf="livre.id === '1'">
+                            Vingt huit ans après son départ tragique et prématuré de la terre des hommes, le souvenir et
+                            les actions de Thomas Sankara restent vivaces dans les mémoires de ses contemporains au
+                            Burkina Faso et en Afrique de manière générale.
+                            <br>
+                            A nos yeux, l’importance de cette étude réside dans sa fonction interpellative : ne pas
+                            jeter aux oubliettes de l’histoire, les hauts faits des héros africains.
+
+                            <br>
+                            En réalité, nul ne peut entretenir un sentiment de fierté civilisationnelle à l’égard d’un
+                            continent tel que l’Afrique dans la négation systématique de la grandeur de ses propres
+                            héros et dans l’admiration béate et quelque fois surfaite de ceux des autres continents.
+
+                            <br>
+                            A celui qui lui posait la question de savoir ce qu’il voulait que l’éternité retienne de son
+                            passage sur la terre, Thomas Sankara répondit, toujours égal à son éthique : « je souhaite
+                            que mon action serve à convaincre les plus incrédules qu’il y a une force, qu’elle s’appelle
+                            le peuple, et qu’il faut se battre pour et avec le peuple ».
+                            Il l’a dit et il l’a fait.
+                            <br>
+                            Le XXIè siècle aura grand besoin de leaders africains à l’éthique irréprochable. Ne disons
+                            plus aux jeunes que l’Afrique devra les rechercher hors du continent.
+
+                        </p>
+                        <p *ngIf="livre.id === '2'">
+                            Sans faire de procès d’intention au CNT libyen, il ne semble pas exagéré de penser, au
+                            regard de l’attitude accusée envers les noirs sub-sahariens durant la crise de
+                            février-octobre 2011 par les responsables de cet organisme, que les investissements en
+                            Afrique noire ne seront pas leur priorité. Pas plus que l’accélération du processus de
+                            création des Etats-Unis d’Afrique. Puisse chaque citoyen du continent, chaque responsable en
+                            Afrique, conscient de la nécessité d’infléchir positivement la courbe de notre trajectoire
+                            dans le monde, intégrer cette nouvelle donne et penser le futur du milliard d’habitants que
+                            nous sommes en y introduisant les nouveaux paramètres qui feront naître des panafricanistes
+                            encore plus fervents, plus dévoués et plus volontaires que Mouamar Al-Kadhafi, Kwamé Nkrumah
+                            et Patrice Emery Lumumba réunis, dont il convient par-delà leurs possibles manquements
+                            individuels de saluer la vision et l’héritage nationalistes.
+
+                        </p>
+                        <p *ngIf="livre.id === '3'">
+                            Without judging the Libyan National Transitional Council (CNT), it would not be an
+                            exaggeration to think that the attitude adopted by officials of that body towards
+                            sub-Saharan Africans during the Libyan crisis of February to October 2011 is a pointer to
+                            the fact that investments in Black Africa will not be their priority. Nor would the
+                            acceleration of the process to create a United States of Africa be a major concern. May each
+                            citizen of the Continent, may each African official, conscious of the need to positively
+                            influence the path of Africa in the world, integrate this new data and think of the future
+                            of the thousands of millions of inhabitants that we are by embracing new parameters that
+                            will give birth to PanAfricanists more fervent than Khaddaffi, Kwame Nkrumah, Patrice
+                            Lumumba all put together, whose vision and nationalist heritage, barring personal lacunae,
+                            should be saluted.
+                        </p>
+
+                        <p *ngIf="livre.id === '4'">
+                            The unique global mobilization at the departure to eternity of " Madiba " deserves no doubt
+                            that we dwell on this true phenomenon that he was, by undertaking some further reflections,
+                            spiced with a multidimensional approach.
+                            <br>
+                            One should indeed wonder what made Nelson Mandela so striking as to accept to convert,
+                            despite his 27 years in prison under a particularly restrictive regime, to an apostle of
+                            peace and champion of national and even international reconciliation.
+                            <br>
+                            How can one explain the fact that, instead of hating the world for being imprisoned for his
+                            ideas on advocating justice for all, the old Patriarch rather feels pity – and even
+                            compassion – for his captors by considering them as the true prisoners of their demeaning
+                            prejudices?
+                            <br>
+                            In the following chapters of this book, we strive to bring some light to these crucial
+                            questions, which relate to a personality that we can not cease to remember, an unusual
+                            figure who has lived in a continent known for its paradoxical aspects of
+                            "conflict-generation."
+                        </p>
+                        <p *ngIf="livre.id === '5'">
+                            L'exceptionnelle mobilisation planétaire suscitée par le départ pour l'éternité de "Madiba"
+                            méritait sans aucun doute que l'on consacrât à ce véritable phénomène, une réflexion
+                            approfondie, irriguée par une approche multidimensionnelle.
+                            <br>
+                            Il convient en effet de se demander ce qui faisait de Nelson Mandela un être si saisissant,
+                            au point d'accepter de se convertir, malgré ses 27 années de prison sous régime
+                            particulièrement contraignant, en apôtre de la paix, et en chantre de la réconciliation
+                            nationale, voire internationale.
+                            <br>
+                            Comment expliquer, en effet, qu'au lieu d'en vouloir au monde entier pour avoir été
+                            incarcéré en raison de ses idées prônant une justice pour tous, le vieux Patriarche en
+                            arrive plutôt à éprouver de la pitié- et même de la compassion- pour ses geôliers en les
+                            considérant comme étant, eux, les véritables prisonniers de leurs préjugés avilissants ?
+                            <br>
+                            La présente réflexion, répartie en six chapitres, s'attèle à apporter quelques éclairages à
+                            ces questions cruciales, qui concernent une personnalité dont on ne cessera de rappeler
+                            qu'elle est hors du commun et qui a vécu dans une continent paradoxalement plus connu sous
+                            sa dimension "conflictogène".
+                        </p>
+                    </div>
+
+                    <div class="acheter">
+                        <button (click)="dialog.open()" class="command-button outline dark nyanga large">
+                            <span class="caption">
+                                Commander le broché
+                                <small>A partir de {{livre.prix}} XAF</small>
+                            </span>
+                        </button>
+                        <button *ngIf="livre.amazon" style="margin-left: 20px;" (click)="amazon(livre)"
+                            class="outline command-button alert nyanga large">
+                            <span class="caption">
+                                Commander le ebook
+                                <small>Disponible sur Amazon</small>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
